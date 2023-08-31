@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../models/genre.dart';
 import '../utils/ui_constants.dart';
 
 class GenreContainer extends StatelessWidget {
-  final String genre;
+  final Genre genre;
 
   const GenreContainer({
     super.key,
@@ -32,14 +33,8 @@ class GenreContainer extends StatelessWidget {
         ),
       ),
       child: Text(
-        genre,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: textStyleFontSize,
-          shadows: [
-            UiConstants.standardShadow,
-          ],
-        ),
+        genre.name,
+        style: UiConstants.genreContainerTextStyle,
       ),
     );
   }

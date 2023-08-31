@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../models/movie.dart';
+
 class PosterBackground extends StatelessWidget {
-  final String url;
+  final Movie movie;
 
   const PosterBackground({
-    required this.url,
+    required this.movie,
     super.key,
   });
 
@@ -21,12 +23,11 @@ class PosterBackground extends StatelessWidget {
           color: Colors.black,
         ),
         Container(
-          height: MediaQuery.of(context).size.height *
-              secondContainerHeightQueryOfContext,
+          height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(
-                url,
+              image: NetworkImage(
+                movie.backdropUrl,
               ),
               fit: BoxFit.cover,
             ),

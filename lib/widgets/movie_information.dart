@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../models/genre.dart';
 import '../models/movie.dart';
+import '../utils/base_future_builder.dart';
+import '../utils/genre_repository.dart';
 import 'genre_container.dart';
 import 'movie_details.dart';
 
@@ -42,10 +45,25 @@ class MovieInformation extends StatelessWidget {
             padding: const EdgeInsets.only(
               bottom: columnSecondPaddingEdgeOnlyBottom,
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children:
-                  movie.genres.map((e) => GenreContainer(genre: e)).toList(),
+            child: BaseFutureBuilder<List<Genre>>(
+              future: GenreRepository.fetchGenresById(
+                movie.genreIds.toList(),
+              ),
+              builder: (
+                context,
+                data,
+              ) {
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: data
+                      .map(
+                        (genre) => GenreContainer(
+                          genre: genre,
+                        ),
+                      )
+                      .toList(),
+                );
+              },
             ),
           ),
         ],
