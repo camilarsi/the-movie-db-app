@@ -9,17 +9,15 @@ import '../widgets/poster_background.dart';
 class MovieInfoOuterLayout extends StatelessWidget {
   const MovieInfoOuterLayout({
     super.key,
-    required this.positionedBottom,
     required this.movie,
   });
-
-  final double positionedBottom;
 
   //TODO fetch from movies JSON/API source:
   final Movie movie;
   static const likesNumber = 1234;
   static const voteAverage = 7.8;
   static const views = 12345;
+  static const double positionedBottom = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class MovieInfoOuterLayout extends StatelessWidget {
             return Stack(
               children: [
                 PosterBackground(
-                  url: movie.imgURL,
+                  movie: movie,
                 ),
                 const FixedSearchBar(),
                 Positioned(
