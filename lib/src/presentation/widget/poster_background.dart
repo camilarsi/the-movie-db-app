@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/movie.dart';
+import '../../domain/entity/movie.dart';
 
 class PosterBackground extends StatelessWidget {
   final Movie movie;
@@ -27,7 +27,7 @@ class PosterBackground extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(
-                movie.backdropUrl,
+                movie.posterUrl,
               ),
               fit: BoxFit.cover,
             ),

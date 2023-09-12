@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 
-import '../models/movie.dart';
+import '../entity/movie.dart';
 
 class MovieRepository {
   static const String moviesDataSource = 'assets/movies_data/movies.json';

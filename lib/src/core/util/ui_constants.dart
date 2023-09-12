@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/genre_container.dart';
+import '../../presentation/widget/genre_container.dart';
 
 abstract class UiConstants {
   static const String imageBaseUrl = 'https://image.tmdb.org/t/p/w500';

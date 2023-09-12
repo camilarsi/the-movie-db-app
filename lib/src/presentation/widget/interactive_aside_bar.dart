@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../helpers/big_number.dart';
+import '../../core/util/big_number.dart';
 import 'custom_icon_button.dart';
 import 'interactive_aside_bar_texts.dart';
 

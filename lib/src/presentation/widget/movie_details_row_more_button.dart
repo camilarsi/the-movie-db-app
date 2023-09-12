@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/ui_constants.dart';
+import '../../core/util/ui_constants.dart';
 
 class MoreButton extends StatelessWidget {
   final String moreButtonTextContent;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../models/movie.dart';
-import '../utils/ui_constants.dart';
-import '../widgets/hero_item.dart';
-import '../widgets/home_app_bar.dart';
-import '../widgets/movie_details_item.dart';
+import '../../core/util/ui_constants.dart';
+import '../../domain/entity/movie.dart';
+import '../widget/hero_item.dart';
+import '../widget/home_app_bar.dart';
+import '../widget/movie_details_item.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({

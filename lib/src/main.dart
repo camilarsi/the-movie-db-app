@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:the_movie_db_app/utils/routes_generator.dart';
+
+import 'config/route/routes_generator.dart';
 
 void main() {
   runApp(const MyApp());

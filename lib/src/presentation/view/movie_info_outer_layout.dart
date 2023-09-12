@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../models/movie.dart';
-import '../widgets/fixed_search_bar.dart';
-import '../widgets/interactive_aside_bar.dart';
-import '../widgets/movie_information.dart';
-import '../widgets/poster_background.dart';
+import '../../domain/entity/movie.dart';
+import '../widget/fixed_search_bar.dart';
+import '../widget/interactive_aside_bar.dart';
+import '../widget/movie_information.dart';
+import '../widget/poster_background.dart';
 
 class MovieInfoOuterLayout extends StatelessWidget {
   const MovieInfoOuterLayout({

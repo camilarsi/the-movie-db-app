@@ -22,6 +22,22 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
+    collection_methods_unrelated_type: true
+    depend_on_referenced_packages: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_relative_imports: true
+    unnecessary_const: true
+    avoid_bool_literals_in_conditional_expressions: true
+    avoid_multiple_declarations_per_line: true
+    avoid_redundant_argument_values: true
+    avoid_returning_null_for_void: true
+    avoid_unnecessary_containers: true
+    avoid_void_async: true
+    await_only_futures: true
+    camel_case_types: true
+    constant_identifier_names: true
+    curly_braces_in_flow_control_structures: true
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
 

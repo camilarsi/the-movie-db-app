@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 
-import '../models/genre.dart';
+import '../entity/genre.dart';
 
 class GenreRepository {
   static const String genresDataSource = 'assets/movies_data/genres.json';

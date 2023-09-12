@@ -1,4 +1,4 @@
-import 'package:the_movie_db_app/utils/ui_constants.dart';
+import '../../core/util/ui_constants.dart';
 
 class Movie {
   final int id;

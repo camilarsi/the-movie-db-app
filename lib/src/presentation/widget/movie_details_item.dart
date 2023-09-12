@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/movie.dart';
-import '../utils/ui_constants.dart';
+import '../../core/util/ui_constants.dart';
+import '../../domain/entity/movie.dart';
 
 class MovieDetailsItem extends StatelessWidget {
   final Movie movie;

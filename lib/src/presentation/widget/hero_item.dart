@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/movie.dart';
+import '../../domain/entity/movie.dart';
 
 class HeroItem extends StatelessWidget {
   const HeroItem({
