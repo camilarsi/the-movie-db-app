@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../models/genre.dart';
-import '../models/movie.dart';
-import '../utils/base_future_builder.dart';
-import '../utils/genre_repository.dart';
+import '../../domain/entity/genre.dart';
+import '../../domain/entity/movie.dart';
+import '../../domain/repository/genre_repository.dart';
+import 'base_future_builder.dart';
 import 'genre_container.dart';
 import 'movie_details.dart';
 

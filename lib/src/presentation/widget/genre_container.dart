@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/genre.dart';
-import '../utils/ui_constants.dart';
+import '../../core/util/ui_constants.dart';
+import '../../domain/entity/genre.dart';
 
 class GenreContainer extends StatelessWidget {
   final Genre genre;

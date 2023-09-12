@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:the_movie_db_app/utils/ui_constants.dart';
-import 'package:the_movie_db_app/widgets/custom_icon_button.dart';
+
+import '../../core/util/ui_constants.dart';
+import 'custom_icon_button.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({

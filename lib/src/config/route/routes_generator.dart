@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../models/movie.dart';
-import '../../screens/movie_info_outer_layout.dart';
-import '../screens/home.dart';
-import 'base_future_builder.dart';
-import 'movie_repository.dart';
+import '../../domain/entity/movie.dart';
+import '../../domain/repository/movie_repository.dart';
+import '../../presentation/view/home.dart';
+import '../../presentation/view/movie_info_outer_layout.dart';
+import '../../presentation/widget/base_future_builder.dart';
 
 class RouteGenerator {
   static const String initialRoute = '/';
