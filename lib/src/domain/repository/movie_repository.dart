@@ -9,19 +9,13 @@ class MovieRepository {
 
   MovieRepository();
 
-  static Future<List<Movie>> fetchMoviesDetails() async {
+  Future<List<Movie>> fetchMoviesList() async {
     final String response = await rootBundle.loadString(moviesDataSource);
     final json = await jsonDecode(response);
     final List<Movie> dataMovies = [];
     for (var jsonObj in json) {
-      dataMovies.add(Movie.fromJson(jsonObj));
+      dataMovies.add(Movie.fromMoviesListBySectionJsonResult(jsonObj));
     }
     return dataMovies;
-  }
-
-  static Future<Movie> fetchMovieDetails(int movieId) async {
-    final movies = await fetchMoviesDetails();
-    final movie = movies.indexWhere((Movie movie) => movie.id == movieId);
-    return movie as Future<Movie>;
   }
 }

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../core/util/ui_constants.dart';
 
-class InteractiveAsideBarTexts extends StatelessWidget {
+class InteractiveAsideBarText extends StatelessWidget {
   final String textContent;
 
-  const InteractiveAsideBarTexts({
+  const InteractiveAsideBarText({
     super.key,
     required this.textContent,
   });

@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../../core/util/ui_constants.dart';
+import '../../domain/entity/genre.dart';
 import '../../domain/entity/movie.dart';
-import '../../domain/repository/movie_repository.dart';
 import '../../presentation/view/home.dart';
 import '../../presentation/view/movie_info_outer_layout.dart';
-import '../../presentation/widget/base_future_builder.dart';
 
 class RouteGenerator {
   static const String initialRoute = '/';
-  static const String movieDetailsRoute = '/movieDetails';
+  static const String movieDetails = '/movieDetails';
   static const String notFoundMessage = 'Route Not Found';
+  static const String movieGridByGenre = '/moviesGridByGenre';
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
-      case movieDetailsRoute:
+      case movieDetails:
         if (args is Movie) {
           return MaterialPageRoute(
             builder: (context) => MovieInfoOuterLayout(
@@ -23,17 +24,17 @@ class RouteGenerator {
         }
       case initialRoute:
         {
+          return MaterialPageRoute(builder: (context) => HomeScreen());
+        }
+      case movieGridByGenre:
+        if (args is Genre) {
           return MaterialPageRoute(
-            builder: (context) => BaseFutureBuilder(
-              future: MovieRepository.fetchMoviesDetails(),
-              builder: (context, data) {
-                return HomeScreen(
-                  moviesHero: data.reversed.toList(),
-                  moviesDetails: data,
-                );
-              },
+            builder: (context) => HomeScreen(
+              genre: args,
             ),
           );
+        } else {
+          throw Exception(UiConstants.defaultFailMessage);
         }
       default:
         return _errorRoute();

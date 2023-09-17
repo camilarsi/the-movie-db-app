@@ -63,4 +63,30 @@ abstract class UiConstants {
     15.0,
   );
   static const homeFlexibleFlexMovieDetailsListView = 1;
+
+  static Container containerGridCircularProgressIndicator = Container(
+    alignment: Alignment.center,
+    height: 10,
+    child: const CircularProgressIndicator(),
+  );
+
+  static const crossAxisCountMoviesGrid = 2;
+  static const EdgeInsetsGeometry paddingEdgeMoviesGrid = EdgeInsets.all(7);
+  static BoxDecoration homeScreenTapBarIndicator = BoxDecoration(
+    borderRadius: BorderRadius.circular(50), // Creates border
+    color: Colors.grey.withOpacity(0.4),
+  );
+
+  static String get apiKey => 'bf81766804766e6fd33ab126ed2631b6';
+  static String get baseUrl => 'https://api.themoviedb.org/3/';
+
+  static const String badRequestHttpStatusMessage = 'Bad request';
+  static const String notFoundHttpStatusMessage =
+      'The request resource was not found';
+  static const String internalServerErrorHttpStatusMessage =
+      'An internal server error occurred';
+  static const String defaultFailMessage = 'Oops! Something went wrong';
+  static const String emptyResponseMessage = 'The response is empty';
+
+  static const String homeAppBarBaseTittle = 'TMDBApp ';
 }

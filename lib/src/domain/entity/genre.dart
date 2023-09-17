@@ -13,4 +13,26 @@ class Genre {
       name: json['name'],
     );
   }
+
+  factory Genre.mockGenre() {
+    return Genre(
+      id: 28,
+      name: 'Action',
+    );
+  }
+
+  static List<Genre> fromJsonList(List<dynamic> jsonArray) {
+    return jsonArray.map((genre) => Genre.fromJson(genre)).toList();
+  }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Genre &&
+          runtimeType == other.runtimeType &&
+          id == other.id &&
+          name == other.name;
+
+  @override
+  int get hashCode => id.hashCode ^ name.hashCode;
 }

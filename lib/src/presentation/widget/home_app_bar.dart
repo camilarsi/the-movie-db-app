@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../core/util/ui_constants.dart';
-import 'custom_icon_button.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
+
   const HomeAppBar({
+    required this.title,
     required this.avatarText,
     super.key,
   });
@@ -14,6 +16,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     'Genres',
     'User Settings',
   ];
+
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
   @override
@@ -22,24 +25,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: UiConstants.homeAppBarElevation,
       backgroundColor: Colors.transparent,
       centerTitle: true,
-      title: const Text(
-        UiConstants.homeAppText,
-      ),
-      leading: PopupMenuButton<String>(
-        onSelected: (item) => () {},
-        child: const CustomIconButton(
-          color: Colors.white,
-          icon: Icons.menu,
-        ),
-        itemBuilder: (context) => popupMenuOptions
-            .map(
-              (option) => PopupMenuItem(
-                value: option,
-                child: Text(option),
-              ),
-            )
-            .toList(),
-      ),
+      title: Text(title),
       actions: [
         CircleAvatar(
           backgroundColor: Colors.indigoAccent,

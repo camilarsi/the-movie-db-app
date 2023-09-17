@@ -3,6 +3,16 @@ class BigNumber {
 
   BigNumber(this._number);
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is BigNumber &&
+          runtimeType == other.runtimeType &&
+          _number == other._number;
+
+  @override
+  int get hashCode => _number.hashCode;
+
   int get number => _number;
 
   String getShortString() {
