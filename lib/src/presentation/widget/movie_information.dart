@@ -9,7 +9,9 @@ import 'movie_details.dart';
 
 class MovieInformation extends StatelessWidget {
   final Movie movie;
+  final GenreRepository genreRepository;
   const MovieInformation({
+    required this.genreRepository,
     super.key,
     required this.movie,
   });
@@ -46,7 +48,7 @@ class MovieInformation extends StatelessWidget {
               bottom: columnSecondPaddingEdgeOnlyBottom,
             ),
             child: BaseFutureBuilder<List<Genre>>(
-              future: GenreRepository.fetchGenresById(
+              future: genreRepository.fetchGenresById(
                 movie.genreIds.toList(),
               ),
               builder: (

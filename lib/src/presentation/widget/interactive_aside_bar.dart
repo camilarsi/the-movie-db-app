@@ -59,21 +59,21 @@ class _InteractiveAsideBarState extends State<InteractiveAsideBar> {
                 },
               ),
             ),
-            InteractiveAsideBarTexts(
+            InteractiveAsideBarText(
               textContent: likesString,
             ),
             const CustomIconButton(
               icon: Icons.star,
               color: iconColor,
             ),
-            InteractiveAsideBarTexts(
+            InteractiveAsideBarText(
               textContent: voteAverageString,
             ),
             const CustomIconButton(
               icon: Icons.remove_red_eye,
               color: iconColor,
             ),
-            InteractiveAsideBarTexts(
+            InteractiveAsideBarText(
               textContent: viewsString,
             ),
           ],
